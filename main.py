@@ -62,8 +62,12 @@ class URLShortener:
         )
         self.entry_shortened_url.pack(pady=10)
 
+        # Frame to hold the buttons horizontally
+        self.button_frame = ctk.CTkFrame(self.master, fg_color="#2b2b2b")
+        self.button_frame.pack(pady=20)
+
         self.button_shorten = ctk.CTkButton(
-            self.master,
+            self.button_frame,
             text="Shorten URL",
             command=self.shorten_url,
             fg_color=self.button_color,
@@ -71,10 +75,10 @@ class URLShortener:
             hover_color="#45a049",
             font=self.font_normal,
         )
-        self.button_shorten.pack(pady=20)
+        self.button_shorten.grid(row=0, column=0, padx=5)
 
         self.button_copy = ctk.CTkButton(
-            self.master,
+            self.button_frame,
             text="Copy to Clipboard",
             command=self.copy_to_clipboard,
             fg_color=self.button_color,
@@ -83,10 +87,10 @@ class URLShortener:
             font=self.font_normal,
             state="disabled",
         )
-        self.button_copy.pack(pady=10)
+        self.button_copy.grid(row=0, column=1, padx=5)
 
         self.button_open_url = ctk.CTkButton(
-            self.master,
+            self.button_frame,
             text="Open URL",
             command=self.open_shortened_url,
             fg_color=self.button_color,
@@ -95,10 +99,10 @@ class URLShortener:
             font=self.font_normal,
             state="disabled",
         )
-        self.button_open_url.pack(pady=10)
+        self.button_open_url.grid(row=0, column=2, padx=5)
 
         self.button_clear = ctk.CTkButton(
-            self.master,
+            self.button_frame,
             text="Clear Fields",
             command=self.clear_fields,
             fg_color="#FF5733",
@@ -106,10 +110,10 @@ class URLShortener:
             hover_color="#e74c3c",
             font=self.font_normal,
         )
-        self.button_clear.pack(pady=10)
+        self.button_clear.grid(row=0, column=3, padx=5)
 
         self.button_delete_history = ctk.CTkButton(
-            self.master,
+            self.button_frame,
             text="Delete History",
             command=self.delete_history,
             fg_color="#FF5733",
@@ -117,7 +121,7 @@ class URLShortener:
             hover_color="#e74c3c",
             font=self.font_normal,
         )
-        self.button_delete_history.pack(pady=10)
+        self.button_delete_history.grid(row=0, column=4, padx=5)
 
         self.url_history = []
         self.label_history = ctk.CTkLabel(
