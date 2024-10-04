@@ -36,10 +36,6 @@ A simple URL shortener application built with Python and customtkinter.
 6. Delete URL history by clicking the "Delete History" button
 7. Clear input fields by clicking the "Clear Fields" button
 
-## License
-
-This application is licensed under the MIT License.
-
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
