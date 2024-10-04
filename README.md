@@ -21,7 +21,7 @@ A simple URL shortener application built with Python and customtkinter.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/url-shortener.git`
+1. Clone the repository: `git clone https://github.com/AliGohar2151/url-shortener.git`
 2. Install required libraries: `pip install customtkinter requests pyperclip`
 3. Create a `data.py` file with your Cutt.ly API key: `api = "your-api-key"`
 4. Run the application: `python main.py`
